@@ -8,28 +8,32 @@ using OpenQA.Selenium.IE;
 namespace SeleniumVst
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest1 :  CommonMethods
     {
 
-        private TestContext testContextInstance;
         private IWebDriver driver;
         private string appURL;
 
         [TestMethod]
         [TestCategory("IE")]
-        public void TestMethod1()
+        public void ValidatingFindVstInBingo()
         {
+            CreateTest("ValidatingVstsInBingo");
             driver.Navigate().GoToUrl(appURL + "/");
             System.Threading.Thread.Sleep(5000);
+            info("Navigating to Url " + appURL);
 
             driver.FindElement(By.Id("sb_form_q")).SendKeys("VSTS");
             System.Threading.Thread.Sleep(5000);
+            info("Sending Value VSTS");
 
             driver.FindElement(By.Id("sb_form_go")).Click();
             System.Threading.Thread.Sleep(5000);
+            info("Clicking on Go.");
 
             //driver.FindElement(By.XPath("//ol[@id='b_results']/li/h2/a/strong[3]")).Click();
             System.Threading.Thread.Sleep(5000);
+            Assert.IsTrue(VerifyEquals("VSTS - Bing", driver.Title, "Successfully navigated", "Navigation Failed."));
             Assert.IsTrue(driver.Title.Contains("VSTS"), "Verified title of the page");
         }
 
@@ -37,6 +41,11 @@ namespace SeleniumVst
         [TestInitialize()]
         public void SetupTest()
         {
+
+            String path = GetCurrentProjectPath() + "/bin/Reports";
+
+            InitReports(path, "CMS-Selenium");
+
             appURL = "http://www.bing.com/";
 
             string browser = "Chrome";
@@ -62,6 +71,8 @@ namespace SeleniumVst
         public void MyTestCleanup()
         {
             driver.Quit();
+
+            reportFlusher();
         }
     }
 }
