@@ -1,0 +1,17 @@
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\SeleniumVst.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\SeleniumVst.pdb
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\WebDriver.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\WebDriver.Support.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\WebDriver.xml
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\bin\Debug\WebDriver.Support.xml
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\obj\Debug\SeleniumVst.csprojResolveAssemblyReference.cache
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\obj\Debug\SeleniumVst.csproj.CoreCompileInputs.cache
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\obj\Debug\SeleniumVst.dll
+C:\Users\Plokeshwar\Documents\Visual Studio 2017\Projects\SeleniumVst\SeleniumVst\obj\Debug\SeleniumVst.pdb
