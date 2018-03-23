@@ -41,7 +41,7 @@ namespace SeleniumVst
         public void SetupTest()
         {
 
-            String path = GetCurrentProjectPath() + "/bin/Reports";
+            String path = GetCurrentProjectPath() + @"/bin/Release/Reports/";
 
             InitReports(path, "CMS-Selenium");
 
