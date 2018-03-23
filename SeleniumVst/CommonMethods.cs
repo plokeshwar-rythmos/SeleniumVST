@@ -11,9 +11,9 @@ namespace SeleniumVst
     {
         public String TakeScreenshot(IWebDriver driver)
         {
-            String path = GetCurrentProjectPath() + "/bin/Screenshot";
-
+            String path = getCurrentProjectPath() + "/bin/Release/Reports/Screenshot";
             createDirectory(path);
+
             StringBuilder TimeAndDate = new StringBuilder(DateTime.Now.ToString());
             TimeAndDate.Replace("/", "_");
             TimeAndDate.Replace(":", "_");
@@ -35,7 +35,7 @@ namespace SeleniumVst
         {
             String path = GetCurrentProjectPath();
 
-            String savedpath = path + @"\bin\Images\";
+            String savedpath = path + @"\bin\Release\Images\";
             Console.WriteLine("Original Path" + savedpath);
             string file = null;
             if (!string.IsNullOrEmpty(savedpath))
@@ -60,7 +60,7 @@ namespace SeleniumVst
             String savedpath1 = file;
             FileInfo finfo = new FileInfo(savedpath1);
             Console.WriteLine("saved Path" + savedpath1);
-            String Updatedpath = path + @"\bin\Images\" + TimeAndDate + ".jpg";
+            String Updatedpath = path + @"\bin\Release\Images\" + TimeAndDate + ".jpg";
             Console.WriteLine("updated Path" + Updatedpath);
             finfo.CopyTo(Updatedpath);
             String time = TimeAndDate.ToString();
@@ -70,7 +70,7 @@ namespace SeleniumVst
         public string getInvalidImagePath()
         {
             String path = GetCurrentProjectPath();
-            String savedpath = path + @"\bin\Images\";
+            String savedpath = path + @"\bin\Release\Images\";
             Console.WriteLine("Original Path" + savedpath);
             string file = null;
             if (!string.IsNullOrEmpty(savedpath))
@@ -93,7 +93,7 @@ namespace SeleniumVst
             String savedpath1 = file;
             FileInfo finfo = new FileInfo(savedpath1);
             Console.WriteLine("saved Path" + savedpath1);
-            String Updatedpath = path + @"\bin\Images\" + TimeAndDate + ".tif";
+            String Updatedpath = path + @"\bin\Release\Images\" + TimeAndDate + ".tif";
             Console.WriteLine("updated Path" + Updatedpath);
             finfo.CopyTo(Updatedpath);
             Console.WriteLine("Original Path" + Updatedpath);
@@ -102,7 +102,7 @@ namespace SeleniumVst
         public string getCodeBlockPath()
         {
             String path = GetCurrentProjectPath();
-            String savedpath = path + @"\bin\CodeBlocks\";
+            String savedpath = path + @"\bin\Release\CodeBlocks\";
             Console.WriteLine("Original Path" + savedpath);
             string file = null;
             if (!string.IsNullOrEmpty(savedpath))
@@ -126,7 +126,7 @@ namespace SeleniumVst
             String savedpath1 = file;
             FileInfo finfo = new FileInfo(savedpath1);
             Console.WriteLine("saved Path" + savedpath1);
-            String Updatedpath = path + @"\bin\CodeBlocks\" + TimeAndDate + ".txt";
+            String Updatedpath = path + @"\bin\Release\CodeBlocks\" + TimeAndDate + ".txt";
             Console.WriteLine("updated Path" + Updatedpath);
             finfo.CopyTo(Updatedpath);
             Console.WriteLine("Original Path" + Updatedpath);
@@ -135,7 +135,7 @@ namespace SeleniumVst
         public string getInvalidCodeBlockPath()
         {
             String path = GetCurrentProjectPath();
-            String savedpath = path + @"\bin\CodeBlocks\";
+            String savedpath = path + @"\bin\Release\CodeBlocks\";
             Console.WriteLine("Original Path" + savedpath);
             string file = null;
             if (!string.IsNullOrEmpty(savedpath))

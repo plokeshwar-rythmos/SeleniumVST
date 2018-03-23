@@ -19,7 +19,7 @@ namespace SeleniumVst
 
         public static ExtentHtmlReporter getHtmlReport()
         {
-            String path = getCurrentProjectPath() + "/bin/Reports";
+            String path = getCurrentProjectPath() + "/bin/Release/Reports";
             new CommonMethods().createDirectory(path);
             ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(path + "/Automation-" + getTimeStamp() + ".html");
             htmlReporter.Configuration().Theme = Theme.Dark;
@@ -50,6 +50,9 @@ namespace SeleniumVst
         */
         public static void InitReports(String folderPath, String reportName)
         {
+
+            System.IO.Directory.CreateDirectory(folderPath);
+
             Console.WriteLine("Initializing Extent Reporting");
             ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(folderPath + "/" + reportName + getTimeStamp() + ".html");
             htmlReporter.Configuration().ReportName = reportName;
@@ -65,19 +68,7 @@ namespace SeleniumVst
          * @param serverUrl
          * @param projectName
          */
-        public void InitReports(String folderPath, String reportName, String mongoDBUrl, String serverUrl,
-                String projectName)
-        {
-            ExtentXReporter xReporter = new ExtentXReporter(mongoDBUrl);
-            xReporter.Configuration().ServerURL = serverUrl;
-            xReporter.Configuration().ReportName = reportName;
-            xReporter.Configuration().ProjectName = projectName;
-            htmlReporter = new ExtentHtmlReporter(folderPath + "/" + reportName + ".html");
-            htmlReporter.Configuration().ReportName = reportName;
-            htmlReporter.Configuration().DocumentTitle = reportName;
-            reporter = new ExtentReports();
-            reporter.AttachReporter(htmlReporter, xReporter);
-        }
+      
         /**
          * Method creates a new instance of test with just testcase name.
          * @param testCaseName
