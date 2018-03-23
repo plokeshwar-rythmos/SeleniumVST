@@ -18,22 +18,17 @@ namespace SeleniumVst
         [TestCategory("IE")]
         public void ValidatingFindVstInBingo()
         {
-            CreateTest("ValidatingVstsInBingo");
             driver.Navigate().GoToUrl(appURL + "/");
             System.Threading.Thread.Sleep(5000);
-            info("Navigating to Url " + appURL);
 
             driver.FindElement(By.Id("sb_form_q")).SendKeys("VSTS");
             System.Threading.Thread.Sleep(5000);
-            info("Sending Value VSTS");
 
             driver.FindElement(By.Id("sb_form_go")).Click();
             System.Threading.Thread.Sleep(5000);
-            info("Clicking on Go.");
 
             //driver.FindElement(By.XPath("//ol[@id='b_results']/li/h2/a/strong[3]")).Click();
             System.Threading.Thread.Sleep(5000);
-            Assert.IsTrue(VerifyEquals("VSTS - Bing", driver.Title, "Successfully navigated", "Navigation Failed."));
             Assert.IsTrue(driver.Title.Contains("VSTS"), "Verified title of the page");
         }
 
