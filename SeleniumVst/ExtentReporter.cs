@@ -53,12 +53,15 @@ namespace SeleniumVst
 
             System.IO.Directory.CreateDirectory(folderPath);
 
+            String file = folderPath + "/" + reportName + getTimeStamp() + ".html";
+
             Console.WriteLine("Initializing Extent Reporting");
-            ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(folderPath + "/" + reportName + getTimeStamp() + ".html");
+            ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(file);
             htmlReporter.Configuration().ReportName = reportName;
             htmlReporter.Configuration().DocumentTitle = reportName;
             reporter = new ExtentReports();
             reporter.AttachReporter(htmlReporter);
+            Console.WriteLine("Creating Reporting file "+file);
         }
         /**
          * Method creates instance of extent with ExtentX Server connection.
